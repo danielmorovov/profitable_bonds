@@ -77,3 +77,13 @@ UI preferences: Clean design with left-aligned metric headings, subtle visual in
 - Live Central Bank key rate from CBR SOAP API with XML parsing
 - Real-time currency exchange rates from CBR JSON API
 - No local database storage - relies entirely on live API data
+
+## Как запустить? Для обхода CORS - через локальный сервер.
+
+1. Установить Python 3.11, при установке добавить Python в PATH, чтобы в командной строке выполнялись напрямую обращения к Python
+2. Запустить командную строку Windows (простую cmd)
+3. Перейти в папку со скачанным приложением (где _app.py_)
+4. Удалить прежнее виртуальное окружение, если оно есть (папка _.venv_): `powershell Remove-Item -Recurse -Force .venv`
+5. Создать новое: `powershell uv venv --python 3.11`
+6. Установить зависимости: `powershell uv pip install streamlit pandas numpy plotly openpyxl`
+7. Запустить приложение: `powershell uv run streamlit run app.py`. В командной строке выводится порт, на котором оно доступно
